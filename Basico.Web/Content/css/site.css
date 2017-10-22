@@ -1,0 +1,819 @@
+﻿/* Angular Material 2017-04*/
+md-content {
+    background-color: rgba(48,48,48,0.7);
+}
+
+:focus {
+    outline: none;
+}
+
+
+/* Angular Material Overrides*/
+md-select-menu.md-default-theme md-content md-option[selected], md-select-menu md-content md-option[selected] {
+    color: blue !important;
+}
+
+md-input-container {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+}
+
+    md-input-container .md-input-message-animation,
+    md-input-container .md-errors-spacer .md-char-counter {
+        font-size: 9px;
+        color: grey;
+    }
+
+    md-input-container .hint {
+        font-size: 9px;
+        /* Position the hint */
+        position: absolute;
+        left: 2px;
+        right: auto;
+        bottom: 7px;
+        /* Copy styles from ng-messages */
+        /*font-size: 9px;*/
+        line-height: 14px;
+        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+        /* Set our own color */
+        color: grey;
+    }
+
+        md-input-container .hint.ng-hide,
+        md-input-container .hint.ng-enter,
+        md-input-container .hint.ng-leave.ng-leave-active {
+            bottom: 26px;
+            opacity: 0;
+        }
+
+            md-input-container .hint.ng-leave,
+            md-input-container .hint.ng-enter.ng-enter-active {
+                bottom: 7px;
+                opacity: 1;
+            }
+
+md-switch {
+    margin: 0;
+    width: 160px;
+    height: 25px;
+}
+
+.md-button {
+    line-height: 25px;
+    min-height: unset;
+    min-width: 70px;
+    margin: 1px 0 1px 0;
+    font-size: 10px;
+}
+
+md-content md-input-container md-switch span,
+md-content md-input-container md-radio-group md-radio-button,
+md-content md-input-container md-radio-group md-radio-button span {
+    font-size: 12px;
+}
+
+md-switch span {
+    font-size: 12px;
+}
+
+.md_button_custom_edit,
+.md_button_custom_cancel,
+.md_button_custom_delete,
+.md_button_custom_save {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+    .md_button_custom_save:not([disabled]):hover {
+        color: lawngreen !important;
+    }
+
+    .md_button_custom_delete:not([disabled]):hover {
+        color: orangered !important;
+    }
+
+    .md_button_custom_cancel:not([disabled]):hover {
+        color: orange !important;
+    }
+
+    .md_button_custom_edit:not([disabled]):hover {
+        color: Highlight !important;
+    }
+
+.md-button.md-default-theme[disabled], .md-button[disabled] {
+    background-color: rgba(0,0,0, 0.06);
+}
+
+
+
+
+/* Qdo ngAnimate é carregado no projeto, há delay no logoff*/
+/*.ng-hide.ng-hide-animate{
+     display: none !important;
+}
+
+body, html, .row-offcanvas {
+    height: 100%;
+}
+
+body {
+    padding-top: 90px;  
+    font-family: Calibri;    
+ }
+
+::-webkit-scrollbar {
+    display: none;
+}*/
+
+
+
+/* Qdo ngAnimate é carregado no projeto, há delay no logoff*/
+.ng-hide.ng-hide-animate {
+    display: none !important;
+}
+
+html {
+    touch-action: manipulation;
+}
+
+body, html, .row-offcanvas {
+    height: 100%;
+}
+
+body {
+    padding-top: 90px;
+    font-family: Roboto; /*  Calibri 201704*/
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+    html::-webkit-scrollbar {
+        width: 9px;
+    }
+
+    html::-webkit-scrollbar-thumb:hover {
+        background-color: gainsboro;
+    }
+
+    html::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background-color: darkgray;
+        outline: 1px solid slategrey;
+    }
+
+@media screen and (min-width: 400px) {
+
+    .navbar-collapse::-webkit-scrollbar {
+        width: 9px;
+    }
+
+    .navbar-collapse::-webkit-scrollbar-thumb:hover {
+        background-color: gainsboro;
+    }
+
+    .navbar-collapse::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+
+    .navbar-collapse::-webkit-scrollbar-thumb {
+        background-color: darkgray;
+        outline: 1px solid slategrey;
+    }
+}
+
+
+
+
+/* Grayscale */
+.navbar-nav > li > a {
+    border-right: none;
+    border-left: none;
+}
+
+
+/* Modificações para Barra de Navegacao da view Video-Index*/
+.container_0 {
+    height: 100%;    
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+       
+    font-family: Calibri;
+    font-size: 12px;
+    
+    overflow: hidden;  
+}
+
+.container_1 {
+    border-radius: 3px;
+    position: relative;
+    height: initial;
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 3px;
+    margin-right: 0px;    
+    min-width: 200px;
+    width: 350px;
+
+    font-family: Calibri;
+    font-size: 12px;
+}
+
+.container_1:hover {        
+        opacity: 1;        
+        z-index: 1;        
+        transition: all .3s ease-in;
+    }
+
+.container_1:hover .cell_2 {
+    transition: all .1s ease-in;   
+}
+
+a {
+    color: white;
+}
+
+.cellmaster {
+
+}
+
+.cell_1 {
+    border-radius: 3px;
+    border: 1px solid #808080;
+    position: relative;
+    float: left;    
+    height: 85px;
+    width: 100px;
+    min-width: 150px;
+}
+
+.cell_1_col01_a {
+    background-color: lightgray;
+    color: red;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1px;
+}
+
+.cell_1_col01_b {
+    background-color: lightgray;
+    color: black;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1px;
+}
+
+.cell_1_col02 {
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1px;
+}
+
+.cell_2 {
+    border-radius: 3px;
+    border: 1px solid #808080;
+    margin-left: 2px;
+    height: 85px;    
+    width: 65.8%;
+    position: relative;
+    float: left;        
+}
+
+.cell_2::-webkit-scrollbar {
+  display: none;
+}
+
+.cell_2_col01 {
+    background-color: lightgray;
+    color: black;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1px;
+}
+
+ .cell_2_col02 {
+    background-color: gray;    
+    border-radius: 2px;
+    text-align: justify;
+    font-size: 10px;
+    margin-bottom: 1px;
+    height: 60px;
+ }
+
+
+
+ /* Modificações para Droplet da view Add Mensagem*/
+section.container {
+    width: 100%;
+    margin: auto;
+    height: 120px;
+    /*display: table-cell;*/
+    vertical-align: middle;
+
+    padding: 0px;
+}
+
+section.container section.droplet {
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    text-align: left;
+    position: relative;
+}
+
+section.container section.droplet h1 a {
+    font-family: Lato, Arial, Tahoma, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 40px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .25);
+}
+
+section.container section.droplet ul.statistics {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+section.container section.droplet ul.statistics li {
+    float: left;
+    overflow: hidden;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
+    margin: 10px 5px 10px 0;
+    color: white;
+    font-family: Times New Roman, Times, serif;
+    font-size: 11px;
+    font-style: italic;
+    padding: 1px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+section.container section.droplet ul.statistics li label {
+    color: rgba(255, 255, 255, .5);
+}
+
+section.container section.droplet droplet {
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    border-radius: 2px;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(255, 255, 255, .1);
+    margin-top: -5px;
+    padding-top: 5px;
+    transition: box-shadow 0.35s;
+}
+
+section.container section.droplet droplet div.loading {
+    display: block;
+    height: 395px;
+    width: 670px;
+    margin: 1px;
+    margin-top: 6px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .35s;
+}
+
+section.container section.droplet droplet div.loading.visible {
+    opacity: 1;
+}
+
+section.container section.droplet droplet.event-dragover {
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, .25), inset 0 0 5px rgba(255, 255, 255, .25);
+}
+
+section.container section.droplet droplet comment:after {
+    content: "";
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    font-family: Lato, Arial, Tahoma, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, .45);
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+}
+
+section.container section.droplet droplet.event-dragover comment:after {
+    content: "";
+}
+
+section.container section.droplet droplet ul.files {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding: 3px;
+    list-style-type: none;
+    transition: all .5s;
+}
+
+section.container section.droplet.uploading droplet ul.files {
+    opacity: .25;
+    filter: blur(2px);
+    -o-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -webkit-filter: blur(2px);
+    pointer-events: none;
+}
+
+section.container section.droplet droplet ul.files li {
+    width: 86px;
+    height: 86px;
+    padding: 1px;
+    float: left;
+    position: relative;
+    margin: 5px;
+}
+
+section.container section.droplet droplet ul.files li img.droplet-preview {
+    max-width: 96px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 96px;
+    width: 96px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    border: 1px solid white;
+    display: block;
+}
+
+section.container section.droplet droplet ul.files li div.delete {
+    background-color: rgba(0, 0, 0, .25);
+    width: 50px;
+    height: 50px;
+    font-family: Lato, Arial, Tahoma, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .25);
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 101;
+    top: -5px;
+    left: 55px;
+    opacity: 0;
+    transition: all .30s;
+    transform: scale(0.5);
+}
+
+section.container section.droplet droplet ul.files li:hover div.delete {
+    opacity: 1;
+    transform: scale(1);
+}
+
+section.container section.droplet droplet ul.files li div.delete:hover {
+    background-color: rgba(0, 0, 0, .45);
+}
+
+section.container section.droplet droplet ul.files li div.size {
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    pointer-events: none;
+    font-size: 9px;
+    font-family: Lato, Arial, Tahoma, Helvetica, sans-serif;
+    padding: 1px 4px;
+}
+
+section.container section.droplet section.message {
+    position: absolute;
+    background-color: deepskyblue;
+    z-index: 2001;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
+    font-family: Lato, Arial, Tahoma, Helvetica, sans-serif;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    transition: all .55s;
+    padding: 0 12px 0 12px;
+    top: -10px;
+    cursor: pointer;
+}
+
+section.container section.droplet section.message.visible {
+    padding: 15px 12px 10px 12px;
+    top: 0;
+}
+
+section.container section.droplet section.message.success {
+    background: linear-gradient(to bottom, rgba(112, 176, 224, 1) 0%, rgba(136, 191, 232, 1) 100%);
+}
+
+section.container section.droplet section.message.error {
+    background: linear-gradient(to bottom, #ce6784 0%, #cc768d 100%);
+
+}
+
+section.container section.droplet section.toolbar {
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    height: 25px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+    background: linear-gradient(to bottom, #ededed 0%, #dedede 100%);
+}
+
+section.container section.droplet section.toolbar .button {
+    display: inline-block;
+    background-color: transparent;
+    float: left;
+    overflow: hidden;
+    width: 100px;
+    height: 100%;
+    border: 0;
+    cursor: pointer;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .75);
+    transition: all 0.25s;
+}
+
+section.container section.droplet section.toolbar .button:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+section.container section.droplet section.toolbar div.add-files {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+section.container section.droplet section.toolbar div.add-files input.droplet-multiple {
+    position: absolute;
+    top: -10px;
+    font-size: 28px;
+    left: -90px;
+    z-index: 1001;
+    opacity: 0.0001;
+    cursor: pointer;
+}
+
+section.container section.droplet section.toolbar div.add-files:hover input.add-files {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+section.container section.droplet section.toolbar input.upload-files {
+    transition: background-color 0.25s;
+    outline: none;
+    pointer-events: none;
+    color: rgba(0, 0, 0, .15);
+}
+
+section.container section.droplet section.toolbar input.upload-files.clickable {
+    pointer-events: all;
+    color: rgba(0, 0, 0, .75);
+}
+
+section.container section.droplet section.toolbar comment.progress {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    float: right;
+    overflow: hidden;
+    font-family: Lato, Arial, Tahoma, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .35);
+    font-size: 11px;
+    padding: 0 8px;
+    margin-right: -60px;
+    opacity: 0;
+    transition: all 0.55s;
+}
+
+section.container section.droplet section.toolbar comment.progress.visible {
+    margin-right: 0;
+    opacity: 1;
+}
+
+section.container section.droplet input.droplet-multiple {
+    color: white;
+    margin-top: 5px;
+}
+
+/* new marcelo */
+section.container section.droplet droplet ul.files li div.filename {
+    font-size: 9px;
+    color:yellow;
+    text-align: center; 
+        max-width: 96px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 96px;
+    width: 96px;
+    background-color: gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    border: 1px solid white;
+    display: block;
+
+}
+
+.form-control::selection {
+  background: lightgray; /* WebKit/Blink Browsers */
+}
+
+
+
+
+/* Login */
+.div_realinhada {    
+    height: 35px;      
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: red;
+  transform: scale(1.04);  
+}
+
+.navbar-custom  .nav li a:hover {
+    color: yellow;
+}
+
+.navbar-custom  .nav li a:hover > div > div .badge {
+    color: yellow;
+}
+
+
+/* Para as input boxes*/
+::-webkit-input-placeholder {
+   font-style: italic;
+    color: lightcoral;
+}
+:-moz-placeholder {
+   font-style: italic;     
+}
+::-moz-placeholder {
+   font-style: italic;     
+}
+:-ms-input-placeholder {  
+   font-style: italic;    
+}
+
+
+/* Panel */
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .nav-tabs{
+	border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+	margin-bottom: -1px;
+}
+/********************************************************************/
+/*** PANEL DEFAULT ***/
+
+.with-nav-tabs.panel-default .nav-tabs > li {
+    background-color: transparent !important;
+}
+
+.with-nav-tabs.panel-default .nav-tabs > li > a,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #777;
+}
+.with-nav-tabs.panel-default .nav-tabs > .open > a,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #777;
+	background-color: #ddd;
+	border-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+	color: #555;
+	background-color: #fff;
+	border-color: #ddd;
+	border-bottom-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #777;   
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #555;
+}
+
+.btn,
+.btn-sm,
+.btn-xs {
+    border-radius: 3px;
+}
+
+/* Table Myiaki*/
+    table#miyazaki {
+        /*margin: 0 auto;      */
+        border-collapse: collapse;
+        font-family: Agenda-Light, sans-serif;
+        font-weight: 100;
+        background: #333;
+        color: #fff;
+        text-rendering: optimizeLegibility;
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    table#miyazaki caption {
+        font-size: 2rem;
+        color: #444;
+        margin: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center left, center right;
+    }
+
+    table#miyazaki thead th {
+        font-weight: 600;
+    }
+
+    table#miyazaki thead th, table#miyazaki tbody td {
+        padding: .8rem;
+        font-size: 1rem;
+    }
+
+    table#miyazaki tbody td {
+        padding: .8rem;
+        font-size: 1rem;
+        color: #444;
+        background: #eee;
+    }
+
+    table#miyazaki tbody tr:not(:last-child) {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+@media screen and (max-width: 400px) {
+    table#miyazaki caption {
+        background-image: none;        
+    }
+
+    table#miyazaki thead {
+        display: none;
+    }
+
+    table#miyazaki tbody td {
+        display: block;
+        padding: .6rem;
+    }
+
+    table#miyazaki tbody tr td:first-child {
+        background: #666;
+        color: #fff;
+    }
+
+    table#miyazaki tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 7rem;
+    }
+}
+
+
+
+/* para index  http://tympanus.net/Tutorials/SplashComingSoonPageEffects/index2.html  */

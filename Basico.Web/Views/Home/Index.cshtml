@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<!--https://startbootstrap.com/template-overviews/grayscale/-->
+<html ng-app="basicospa">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Basico" />
+    <meta name="keywords" content="Basico" />
+    <link rel="shortcut icon" type="image/png" href="basico_favicon.ico">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/basico/">
+
+    <title>Basico</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet" type="text/css">
+</head>
+<body ng-controller="rootCtrl" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" background="~/_imagery/_billet_fundo.png" class="basicoFundoBodyClass">
+    @Scripts.Render("~/bundles/vendors")
+    @Scripts.Render("~/bundles/spa")
+    <script src="./signalr/hubs"></script>
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        @*<top-bar></top-bar>*@
+        <div class="container"> 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a href="." class="navbar-brand">
+                    <i class="fa fa-play-circle"></i> Basico
+                </a>
+            </div>
+            <div id="nav-main" class="navbar-collapse navbar-main-collapse collapse">
+                <ul id="navbarEscondido0" hidden class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" ng-hide="!userData.isUserLoggedIn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> {{firstname}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./account">Seu Acesso</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="./chat">Chat</a></li>
+                        </ul>
+                    </li>
+                    <li><a ng-hide="!userData.isUserLoggedIn" href="." ng-click="logout();"><span class="glyphicon glyphicon-log-out text-danger"></span></a></li>
+                    <li><a ng-hide="userData.isUserLoggedIn" ng-href="./login" href="./login"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
+                    <li><a ng-href="./register" href="./register"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+    <div class="row-offcanvas row-offcanvas-left">
+        <div id="main" class="container body-content">
+            <div class="">
+                <!-- ngView:  -->
+                <div class="page page-home" ng-view="">
+                    <div class="row ng-scope"></div>
+                </div>
+            </div>            
+        </div>
+    </div>    
+</body>
+    @*<script>$(document).ready(function () { angular.element('#page-top').scope().hubConnect(); });</script>*@
+</html>
+
+
+

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<connectionStrings>
+  <add name="Basico" connectionString="workstation id=basicodb.mssql.somee.com;packet size=4096; Data Source=basicodb.mssql.somee.com;Initial Catalog=basicodb;Persist Security Info=False;user id=betabilhete_SQLLogin_1;Password=2udw327to9;MultipleActiveResultSets=true" providerName="System.Data.SqlClient" />
+</connectionStrings>

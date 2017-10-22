@@ -1,0 +1,116 @@
+﻿<div class="chat">
+    <md-sidenav class="md-sidenav-left" md-component-id="nav_perfil" md-whiteframe="4" style="overflow: hidden">
+        <md-toolbar class="md-theme-indigo">
+            <h4 class="md-toolbar-tools header_nav">
+                <button ng-click="ctrlr.toggle_sidenav('nav_perfil')" class="fa fa-angle-left"></button>
+                Perfil
+            </h4>
+        </md-toolbar>
+
+        <md-content layout-margin>
+            <p>
+                This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
+            </p>
+        </md-content>
+    </md-sidenav>
+    <md-sidenav class="md-sidenav-left" md-component-id="nav_conversas" md-whiteframe="4" style="overflow: hidden">
+        <div style="position: absolute; width: 100%;height: 100%;">
+            <md-toolbar class="md-theme-indigo">
+                <h4 class="md-toolbar-tools ">
+                    <button ng-click="ctrlr.toggle_sidenav('nav_conversas')" class="fa fa-angle-left"></button>
+                    Conversas
+                </h4>
+            </md-toolbar>
+            <md-toolbar class="md-theme-indigo" style="" layout-padding hidden>
+                <div class="toolbar_input">
+                    <input type="text" class="toolbar_input_box" placeholder="Buscar conversas" ng-model="ctrlr.buscar_conversa" />
+                </div>
+            </md-toolbar>
+            <md-list style="position: relative">
+                <md-list-item class="md-3-line md-clickable" ng-repeat="item in ctrlr.bchat_contactos" ng-click="ctrlr.toggle_sidenav('nav_conversas')">
+                    <img ng-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" class="md-avatar chat_contato_avatar" alt="{{item.usuario}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h5>{{item.nome_apelido == '' ? item.usuario : item.nome_apelido }}<span style="z-index: 2; right: 5px; position: absolute; font-size: 9px; color: lightgray; font-weight: normal; text-shadow: none; font-family: 'Roboto'; text-transform: none">{{item.bchat_room.mensagens[item.bchat_room.mensagens.length - 1].dt_utc | date : "dd 'de' MMMM 'de' yyyy"}}</span></h5>
+                        <h6 ng-if="item.dependencia">{{item.dependencia.nome}} <span class="contato_funcao">| {{item.funcao}}</span></h6>
+                        <h6 ng-if="item.unidade">{{item.unidade.torre.nome}}-{{item.unidade.numero}} <span class="contato_funcao"> | {{item.funcao}}</span></h6>
+                        <h6 ng-if="!item.dependencia && !item.unidade">{{item.funcao}}</h6>
+                        <p class="contato_ultima_mensagem" ng-if="item.bchat_room.mensagens.length > 0">{{item.bchat_room.mensagens[item.bchat_room.mensagens.length - (item.bchat_room.mensagens[item.bchat_room.mensagens.length - 1].incoming ? 2 : 1)].texto}}</p>
+                    </div>
+                    <div class="badge contato_badge_nao_lida" ng-if="item.bchat_room.mensagens.length > 0"><p style="">{{item.bchat_room.mensagens[item.bchat_room.mensagens.length - 1].incoming ? item.bchat_room.mensagens.length - 1 : item.bchat_room.mensagens.length}}</p></div>
+                </md-list-item>
+            </md-list>
+        </div>
+    </md-sidenav>
+    <md-sidenav class="md-sidenav-left" md-component-id="nav_nova_conversa" md-whiteframe="4" style="overflow: hidden">
+        <div style="position: absolute; width: 100%;height: 100%;">
+            <md-toolbar class="md-theme-indigo">
+                <h4 class="md-toolbar-tools ">
+                    <button ng-click="ctrlr.toggle_sidenav('nav_nova_conversa')" class="fa fa-angle-left"></button>
+                    Nova Conversa
+                </h4>
+            </md-toolbar>
+            <md-toolbar class="md-theme-indigo" style="" layout-padding>
+                <div class="toolbar_input">
+                    <input type="text" class="toolbar_input_box" placeholder="Buscar contatos" ng-model="ctrlr.buscar_contatos" />
+                </div>
+            </md-toolbar>
+            <md-list style="position: relative">
+                <md-list-item class="md-3-line" ng-repeat="item in ctrlr.bchat_contactos | filter: ctrlr.buscar_contatos" ng-click="ctrlr.novoChatRoom(item)">
+                    <img ng-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" class="md-avatar chat_contato_avatar" alt="{{item.usuario}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h5>{{item.nome_apelido == '' ? item.usuario : item.nome_apelido }}</h5>
+                        <h6 ng-if="item.dependencia">{{item.dependencia.nome}}</h6>
+                        <h6 ng-if="item.unidade">{{item.unidade.torre.nome}}-{{item.unidade.numero}}</h6>
+                        <p class="contato_funcao">{{item.funcao}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+    </md-sidenav>
+    <div class="chat-title" style="background: seagreen;">
+        <h1 style="color: rgba(255, 255, 255, 1);cursor: pointer; width: 100px;" ng-click="ctrlr.toggle_sidenav('nav_perfil')">Você</h1>
+        <h2 style="color: rgba(255, 255, 255, 1);cursor: pointer; width: 100px;" ng-click="ctrlr.toggle_sidenav('nav_perfil')">Supah</h2>
+        <figure class="avatar" ng-click="ctrlr.toggle_sidenav('nav_perfil')" style="cursor: pointer">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" />
+        </figure>
+        <div class="chat_options">
+            <i class="fa fa-user" style="margin-right: 20px;" aria-hidden="true" ng-click="ctrlr.toggle_sidenav('nav_perfil')"></i>
+            <i class="fa fa-comments" style="margin-right: 20px;" aria-hidden="true" ng-click="ctrlr.toggle_sidenav('nav_conversas')"></i>
+            <i class="fa fa-comment" aria-hidden="true" ng-click="ctrlr.toggle_sidenav('nav_nova_conversa')"><i class="fa fa-plus" style="font-size: 10px; position: absolute; top: -5px; right: -6px" aria-hidden="true"></i></i>
+        </div>
+    </div>
+    <div class="chat-title">
+        <h1>Fabio Ottaviani</h1>
+        <h2>Supah</h2>
+        <figure class="avatar">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" />
+        </figure>
+    </div>
+    <div class="messages">
+        <div class="messages-content" id="messages_content" scroll-glue="ctrlr.glued">
+            <div ng-repeat="msg in ctrlr.bchat_room_curr.mensagens">
+                <div class="message-datetime" ng-if="!msg.incoming && ($index == 0 || ($index > 0 && (ctrlr.bchat_room_curr.mensagens[$index - 1].dt_utc.getMinutes() !== msg.dt_utc.getMinutes())))">
+                    <div class="message-datetime-date">{{msg.dt_utc  | date : "dd 'de' MMMM 'de' yyyy"}}</div>
+                </div>
+                <div class="message message-personal" ng-class="{ 'new' : msg.class_new == true, 'margin_last_child' : ctrlr.bchat_room_curr.mensagens.length == $index + 1 }" ng-if="!msg.incoming && msg.personal">
+                    {{msg.texto}}
+                    <div class="timestamp">{{msg.dt_utc | date : "hh:mm"}}</div>
+                </div>
+                <div class="message " ng-class="{ 'new' :  msg.class_new == true, 'margin_last_child' : ctrlr.bchat_room_curr.mensagens.length == $index + 1 }" ng-if="!msg.incoming && !msg.personal">
+                    <figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure>
+                    {{msg.texto}}
+                    <div class="timestamp">{{msg.dt_utc | date : "hh:mm"}}</div>
+                </div>
+                <div class="message loading new" ng-if="msg.incoming" style="min-width: 0" ng-class="{ 'margin_last_child' : ctrlr.bchat_room_curr.mensagens.length == $index + 1 }">
+                    <figure class="avatar"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <button ng-if="!ctrlr.glued" style="position: fixed; width: 21px; height: 20px; color: white; bottom: 60px; right: 20px; cursor: pointer; background-color: lightslategrey; border: 1px white; border-radius: 50px; outline: unset" class="fa fa-angle-down" ng-click="ctrlr.reset(true);"><span class="" style="font-family: 'Montserrat'; font-weight: 700; position: absolute; top: -5px; right: 0px; font-size: 10px; color: orange" ng-if="ctrlr.bchat_room_curr.mensagens.length - ctrlr.lastcnt > 0">{{ctrlr.bchat_room_curr.mensagens.length - ctrlr.lastcnt}}</span></button>
+    </div>
+    <div class="message-box">
+        <textarea autofocus type="text" class="message-input" placeholder="Digite aqui..." ng-model="ctrlr.mensagem_nova"></textarea>
+        <button type="submit" class="message-submit" style="cursor: {{ctrlr.mensagem_nova ? 'pointer' : 'default'}}" ng-click="ctrlr.insertMessage(true)"><i class="fa fa-send" style="font-size: 18px; color: {{ctrlr.mensagem_nova ? 'limegreen' : 'gray'}}"></i></button>
+    </div>
+</div> 

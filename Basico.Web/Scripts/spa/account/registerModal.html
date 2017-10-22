@@ -1,0 +1,93 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        <!--<label class="label label-danger">Admin</label>-->
+        <h3 class="form-signin-heading">Novo Registro</h3>
+    </div>
+    <div class="panel-body">
+        <form role="form" name="userRegistrationForm">
+            <div class="">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6" ng-class="{'has-error': existingUsername || (userRegistrationForm.inputUsername.$invalid && userRegistrationForm.inputUsername.$dirty)}">
+                            <label for="inputUsername" class="sr-only">Usuário</label>
+                            <input type="text" id="inputUsername" name="inputUsername" ng-change="existingUsername = false" class="form-control" ng-minlength="4" ng-maxlength="20" ng-model="user.username" placeholder="seu usuário" ng-blur="verificar('username', user.username)" required />
+                        </div>
+                        <div class="div_realinhada" ng-show="existingUsername">
+                            <span style="color:orange" class="glyphicon glyphicon-remove-sign"></span> Usuário já existe
+                        </div>
+                        <div class="div_realinhada" ng-show="userRegistrationForm.inputUsername.$error.required && userRegistrationForm.inputUsername.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> O usuário é requerido
+                        </div>
+                        <div class="div_realinhada" ng-show="!userRegistrationForm.inputUsername.$error.required && (userRegistrationForm.inputUsername.$error.minlength || userRegistrationForm.inputUsername.$error.maxlength) && userRegistrationForm.inputUsername.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Entre 4 e 20 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6" ng-class="{'has-error': (userRegistrationForm.inputFirstname.$invalid && userRegistrationForm.inputFirstname.$dirty)}">
+                            <label for="inputFirstname" class="sr-only">Primeiro Nome</label>
+                            <input type="text" id="inputFirstname" name="inputFirstname" class="form-control" ng-minlength="1" ng-maxlength="20" ng-model="user.firstname" placeholder="seu primeiro nome: Paulo, Ana Paula, José" required />
+                        </div>
+                        <div class="div_realinhada" ng-show="userRegistrationForm.inputFirstname.$error.required && userRegistrationForm.inputFirstname.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Primeiro nome é requerido
+                        </div>
+                        <div class="div_realinhada" ng-show="!userRegistrationForm.inputFirstname.$error.required && (userRegistrationForm.inputFirstname.$error.minlength || userRegistrationForm.inputFirstname.$error.maxlength) && userRegistrationForm.inputFirstname.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Entre 1 e 20 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 selectContainer" ng-class="{'has-error': existingEmail || (userRegistrationForm.inputEmail.$invalid && userRegistrationForm.inputEmail.$dirty)}">
+                            <label for="inputEmail" class="sr-only">Email</label>
+                            <input type="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" name="inputEmail" class="form-control" ng-change="existingEmail = false" ng-model="user.email" placeholder="seu email" required ng-blur="verificar('email', user.email)" />
+                        </div>
+                        <div class="div_realinhada" ng-show="existingEmail">
+                            <span style="color:orange" class="glyphicon glyphicon-remove-sign"></span> Email já existe
+                        </div>
+                        <div class="div_realinhada" ng-show="userRegistrationForm.inputEmail.$error.required && userRegistrationForm.inputEmail.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> O email é requerido
+                        </div>
+                        <div class="div_realinhada" ng-show="!userRegistrationForm.inputEmail.$error.required && userRegistrationForm.inputEmail.$error.email && userRegistrationForm.inputEmail.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Email inválido
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-6 selectContainer">
+                        <label for="inputPassword" class="sr-only">Senha</label>
+                        <input type="password" id="inputPassword" name="inputPassword" ng-model="user.password" placeholder="sua senha" class="form-control" required />
+                    </div>
+                    <div class="div_realinhada" ng-show="userRegistrationForm.inputPassword.$error.required && userRegistrationForm.inputPassword.$dirty">
+                        <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> A senha é requerida
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 selectContainer">
+                    <div class="form-group">
+                        <label for="inputPassword_c" class="sr-only">Confirm Password</label>
+                        <input type="password" id="inputPassword_c" name="inputPassword_c" ng-model="user.password_c" placeholder="repita senha" valid-password-c="{{user.password===user.password_c}}" class="form-control" required />
+                    </div>
+                </div>
+                <div class="div_realinhada" ng-show="userRegistrationForm.inputPassword_c.$error.required && userRegistrationForm.inputPassword.$dirty && userRegistrationForm.inputPassword_c.$dirty">
+                    <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> A confirmação de senha é requerida
+                </div>
+                <div class="div_realinhada" ng-show="(!userRegistrationForm.inputPassword_c.$error.required && userRegistrationForm.inputPassword_c.$error.noMatch && userRegistrationForm.inputPassword.$dirty)">
+                    <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> As senhas não são iguais
+                </div>
+            </div>
+        </form>
+        <form role="form" ng-submit="register()">
+            <div class="panel-footer clearfix">
+                <div class="pull-right">
+                    <button class="btn btn-xs btn-success" ng-disabled="userRegistrationForm.$invalid || existingUsername || existingEmail || !isEnabled" type="submit">Registrar</button>
+                    <button class="btn btn-xs btn-primary" ng-disabled="!isEnabled" type="button" ng-click="sair()">Agora não</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

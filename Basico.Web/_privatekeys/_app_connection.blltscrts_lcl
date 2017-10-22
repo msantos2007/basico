@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<connectionStrings>
+  <add name="Basico" connectionString="Data Source=Home-01\SQLEXPRESS;Initial Catalog=basicodb;Integrated Security=SSPI; MultipleActiveResultSets=true" providerName="System.Data.SqlClient" />
+</connectionStrings>

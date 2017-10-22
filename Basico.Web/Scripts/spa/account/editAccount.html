@@ -1,0 +1,154 @@
+﻿<h3 class="form-signin-heading">Seu Acesso</h3>
+<div ng-hide="loadingUser">
+    <form class="form-signin form-horizontal" role="form" novalidate angular-validator name="userEditForm" angular-validator-submit="UpdateUser()">
+        <!--<div class="">
+            <h4 class="">
+                {{ apelido_username == '' ? username : apelido_username }}
+                <label class="" ng-repeat="role in userRoles">
+                    <span class="badge" style="background-color:#940000" ng-show="role.Name=='Root'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#940000" ng-show="role.Name=='Admin'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:green" ng-show="role.Name=='Usuário'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Síndico'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Sub-Síndico'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Gerente'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Supervisor'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Colaborador'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Vigilante'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#002a81" ng-show="role.Name=='Porteiro'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#56008a" ng-show="role.Name=='Proprietário'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#56008a" ng-show="role.Name=='Morador'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#808080" ng-show="role.Name=='Agregado'"> {{role.Name}}</span>
+                    <span class="badge" style="background-color:#808080" ng-show="role.Name=='Convidado'"> {{role.Name}}</span>
+                </label>
+            </h4>
+        </div>-->
+        <!--<div class="form-group">
+            <div class="row">
+                <label class="col-sm-2 control-label">Usuário</label>
+                <div class="col-sm-6" ng-class="{'has-error': userEditForm.inputUsername.$invalid && userEditForm.inputUsername.$dirty}">
+                    <label for="inputUsername" class="sr-only">Usuário</label>
+                    <input type="text" id="inputUsername" name="inputUsername" class="form-control" ng-minlength="5" ng-maxlength="20" ng-model="user.Username" placeholder="novo usuário" required />
+                </div>
+                <div class="div_realinhada" ng-show="userEditForm.inputUsername.$dirty && !userEditForm.inputUsername.$error.required && (!userEditForm.inputUsername.$error.minlength && !userEditForm.inputUsername.$error.maxlength)">
+                    <span style="color:#ffd800" class="glyphicon glyphicon-ok-sign"></span> Será verificado ao atualizar
+                </div>
+                <div class="div_realinhada" ng-show="userEditForm.inputUsername.$error.required && userEditForm.inputUsername.$dirty">
+                    <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> O usuário é requerido
+                </div>
+                <div class="div_realinhada" ng-show="!userEditForm.inputUsername.$error.required && (userEditForm.inputUsername.$error.minlength || userEditForm.inputUsername.$error.maxlength) && userEditForm.inputUsername.$dirty">
+                    <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Entre 5 e 20 caracteres
+                </div>
+            </div>
+        </div>-->
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Primeiro Nome</label>
+            <div class="col-sm-6" ng-class="{'has-error': userEditForm.inputFirstname.$invalid && userEditForm.inputFirstname.$dirty}">
+                <label for="inputFirstname" class="sr-only">Primeiro Nome</label>
+                <input type="text" id="inputFirstname" name="inputFirstname" class="form-control" ng-minlength="1" ng-maxlength="20" ng-model="user.Firstname" placeholder="seu primeiro nome - exemplos: Paulo, Ana Paula, José" required />
+            </div>
+            <div class="div_realinhada" ng-show="userEditForm.inputFirstname.$error.required && userEditForm.inputUsername.$dirty">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Primeiro nome é requerido
+            </div>
+            <div class="div_realinhada" ng-show="!userEditForm.inputFirstname.$error.required && (userEditForm.inputFirstname.$error.minlength || userEditForm.inputFirstname.$error.maxlength) && userEditForm.inputFirstname.$dirty">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Entre 1 e 20 caracteres
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-6 selectContainer" ng-class="{'has-error': (userEditForm.inputEmail.$error.required || userEditForm.inputEmail.$error.email) && userEditForm.inputEmail.$dirty}">
+                <label for="inputEmail" class="sr-only">Email</label>
+                <input type="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" name="inputEmail" class="form-control" ng-model="user.Email" placeholder="novo email" required />
+            </div>
+            <div class="div_realinhada" ng-show="userEditForm.inputEmail.$dirty && !userEditForm.inputEmail.$error.required  && !userEditForm.inputEmail.$error.email">
+                <span style="color:#ffd800" class="glyphicon glyphicon-ok-sign"></span> Será verificado ao atualizar
+            </div>
+            <div class="div_realinhada" ng-show="userEditForm.inputEmail.$error.required && userEditForm.inputEmail.$dirty">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> O email é requerido
+            </div>
+            <div class="div_realinhada" ng-show="!userEditForm.inputEmail.$error.required && userEditForm.inputEmail.$error.email && userEditForm.inputEmail.$dirty">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Email inválido
+            </div>
+
+        </div>
+        <hr />
+        <div class="form-group">
+
+            <label class="col-sm-2 control-label">Senhas</label>
+            <div class="col-sm-6 selectContainer">
+                <label for="inputPassword_n" class="sr-only">Nova Senha</label>
+                <input type="password" id="inputPassword_n" name="inputPassword_n" ng-model="user.newpassword_n" placeholder="nova senha" class="form-control" />
+            </div>
+            <div class="div_realinhada" ng-show="user.newpassword_n">
+                <span style="color:green" class="glyphicon glyphicon-ok-sign"></span>
+            </div>
+
+        </div>
+        <div class="form-group">
+
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6 selectContainer" ng-class="{'has-error': (user.newpassword_n && !user.newpassword_c) || (user.newpassword_n && !isShown(user.newpassword_n, user.newpassword_c, user.password) &&  user.newpassword_c) }">
+                <label for="inputPassword_c" class="sr-only">Confirme a Nova Senha</label>
+                <input type="password" id="inputPassword_c" name="inputPassword_c" ng-model="user.newpassword_c" placeholder="nova senha - repita" class="form-control" />
+            </div>
+            <div class="div_realinhada" ng-show="isShown(user.newpassword_n, user.newpassword_c, user.password)">
+                <span style="color:green" class="glyphicon glyphicon-ok-sign"></span>
+            </div>
+            <div class="div_realinhada" ng-show="user.newpassword_n && !user.newpassword_c">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Confirme Nova Senha
+            </div>
+            <div class="div_realinhada" ng-show="user.newpassword_n
+                                             &&  !isShown(user.newpassword_n, user.newpassword_c, user.password)
+                                             &&  user.newpassword_c">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> As senhas não são iguais
+            </div>
+
+        </div>
+        <div class="form-group">
+
+            <br />
+
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6 selectContainer" ng-class="{'has-error': (!user.password && (user.newpassword_n || user.newpassword_c)) }">
+                <label for="inputPassword" class="sr-only">Redigite sua Senha atual</label>
+                <input type="password" id="inputPassword" name="inputPassword" ng-model="user.password" placeholder="senha atual - informe" class="form-control" />
+            </div>
+            <div class="div_realinhada" ng-show="user.newpassword_n
+                                             &&  user.newpassword_c
+                                             &&  user.password
+                                             && (isShown(user.newpassword_n, user.newpassword_c, user.password))">
+                <span style="color:green" class="glyphicon glyphicon-ok-sign"></span> Será verificada ao atualizar
+            </div>
+            <div class="div_realinhada" ng-show="!user.newpassword_n
+                                             &&  !user.newpassword_c
+                                             &&  user.password">
+                <span style="color:yellow" class="glyphicon glyphicon-ok-sign"></span> Informe e repita a Nova Senha
+            </div>
+            <div class="div_realinhada" ng-show="user.newpassword_n
+                                             &&  !user.newpassword_c
+                                             &&  user.password">
+                <span style="color:yellow" class="glyphicon glyphicon-circle-arrow-up"></span> Repita a Nova Senha
+            </div>
+            <div class="div_realinhada" ng-show="!user.newpassword_n
+                                             &&  user.newpassword_c
+                                             &&  user.password">
+                <span style="color:yellow" class="glyphicon glyphicon-circle-arrow-up"></span> Informe a Nova Senha
+            </div>
+            <div class="div_realinhada" ng-show="user.newpassword_n
+                                             &&  user.newpassword_c
+                                             &&  user.password
+                                             && (!isShown(user.newpassword_n, user.newpassword_c, user.password))">
+                <span style="color:yellow" class="glyphicon glyphicon-circle-arrow-up"></span>  As novas senhas não são iguais
+            </div>
+            <div class="div_realinhada" ng-show="!user.password && (user.newpassword_n || user.newpassword_c)">
+                <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Necessária para sua alteração
+            </div>
+        </div>
+        <hr />
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-6" style="padding-left: 5px">
+            <button class="btn btn-sm btn-danger" type="submit">Atualizar</button>
+            <button class="btn btn-sm btn-primary" type="button" ng-click="closeform()">Agora Não</button>
+            <!--<button class="btn btn-lg btn-primary btn-block" type="button" ng-click="closeform()">Cancelar</button>-->
+        </div>
+    </form>
+</div>

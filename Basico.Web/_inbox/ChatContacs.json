@@ -1,0 +1,674 @@
+[
+  {
+    "anti_ID": "08a259fb-3ebc-4819-a164-612cea1727f6",
+    "bllt_ID": null,
+    "usuario": "prev",
+    "funcao": "Administrador",
+    "nome_apelido": "adm",
+    "nome_completo": "Marcelo Santos",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": null
+  },
+  {
+    "anti_ID": "7cce895d-421a-4f91-81a7-f306edfe770e",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Porteiro",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 1,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Administração",
+      "nomeExtenso": "Administração",
+      "tipoDependencia": {
+        "ID": 1,
+        "nome": "Administração",
+        "prioridade": 1,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "729e9e8a-d6b1-4de5-b48e-ec5cd0790d1c",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Proprietário",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": {
+      "andar": 1,
+      "coluna": 1,
+      "numero": 101,
+      "nome": "1-101",
+      "ordem": 0,
+      "torre": {
+        "ID": 1,
+        "condID": 1,
+        "numero": 1,
+        "nome": "Bloco 1",
+        "nomeExtenso": "Bloco 1",
+        "ordem": 0,
+        "condTorreAndares": [],
+        "unidades": [
+          {
+            "convites": [],
+            "ID": 1,
+            "condID": 1,
+            "condTorreID": 1,
+            "andar": 1,
+            "coluna": 1,
+            "numero": 101,
+            "nome": "1-101",
+            "ordem": 0,
+            "dt_criacao": "2017-02-24T22:29:18.607",
+            "usr_criacao": "prev",
+            "dt_alteracao": null,
+            "usr_alteracao": null
+          }
+        ],
+        "dt_criacao": "2017-02-24T22:29:18.583",
+        "usr_criacao": "prev",
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    }
+  },
+  {
+    "anti_ID": "1eebd258-7618-4796-90e0-99aa26da4d63",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Morador",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": {
+      "andar": 1,
+      "coluna": 1,
+      "numero": 101,
+      "nome": "1-101",
+      "ordem": 0,
+      "torre": {
+        "ID": 1,
+        "condID": 1,
+        "numero": 1,
+        "nome": "Bloco 1",
+        "nomeExtenso": "Bloco 1",
+        "ordem": 0,
+        "condTorreAndares": [],
+        "unidades": [
+          {
+            "convites": [],
+            "ID": 1,
+            "condID": 1,
+            "condTorreID": 1,
+            "andar": 1,
+            "coluna": 1,
+            "numero": 101,
+            "nome": "1-101",
+            "ordem": 0,
+            "dt_criacao": "2017-02-24T22:29:18.607",
+            "usr_criacao": "prev",
+            "dt_alteracao": null,
+            "usr_alteracao": null
+          }
+        ],
+        "dt_criacao": "2017-02-24T22:29:18.583",
+        "usr_criacao": "prev",
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    }
+  },
+  {
+    "anti_ID": "df20aa7d-945d-4406-bb00-3714c7fc3147",
+    "bllt_ID": null,
+    "usuario": "prev",
+    "funcao": "Morador",
+    "nome_apelido": "adm",
+    "nome_completo": "Marcelo Santos",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": {
+      "andar": 1,
+      "coluna": 1,
+      "numero": 101,
+      "nome": "1-101",
+      "ordem": 0,
+      "torre": {
+        "ID": 1,
+        "condID": 1,
+        "numero": 1,
+        "nome": "Bloco 1",
+        "nomeExtenso": "Bloco 1",
+        "ordem": 0,
+        "condTorreAndares": [],
+        "unidades": [
+          {
+            "convites": [],
+            "ID": 1,
+            "condID": 1,
+            "condTorreID": 1,
+            "andar": 1,
+            "coluna": 1,
+            "numero": 101,
+            "nome": "1-101",
+            "ordem": 0,
+            "dt_criacao": "2017-02-24T22:29:18.607",
+            "usr_criacao": "prev",
+            "dt_alteracao": null,
+            "usr_alteracao": null
+          }
+        ],
+        "dt_criacao": "2017-02-24T22:29:18.583",
+        "usr_criacao": "prev",
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    }
+  },
+  {
+    "anti_ID": "b037d3b7-89d3-4675-a44a-229e06b2269f",
+    "bllt_ID": null,
+    "usuario": "nono",
+    "funcao": "Morador",
+    "nome_apelido": "nono",
+    "nome_completo": "nono",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": {
+      "andar": 1,
+      "coluna": 1,
+      "numero": 101,
+      "nome": "1-101",
+      "ordem": 0,
+      "torre": {
+        "ID": 1,
+        "condID": 1,
+        "numero": 1,
+        "nome": "Bloco 1",
+        "nomeExtenso": "Bloco 1",
+        "ordem": 0,
+        "condTorreAndares": [],
+        "unidades": [
+          {
+            "convites": [],
+            "ID": 1,
+            "condID": 1,
+            "condTorreID": 1,
+            "andar": 1,
+            "coluna": 1,
+            "numero": 101,
+            "nome": "1-101",
+            "ordem": 0,
+            "dt_criacao": "2017-02-24T22:29:18.607",
+            "usr_criacao": "prev",
+            "dt_alteracao": null,
+            "usr_alteracao": null
+          }
+        ],
+        "dt_criacao": "2017-02-24T22:29:18.583",
+        "usr_criacao": "prev",
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    }
+  },
+  {
+    "anti_ID": "0283bc91-ea73-4fe1-829a-db14883731a2",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Porteiro",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 2,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Portaria 1",
+      "nomeExtenso": "Portaria 1",
+      "tipoDependencia": {
+        "ID": 2,
+        "nome": "Portaria",
+        "prioridade": 2,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "06abad33-1041-416e-918c-bb769a3425cb",
+    "bllt_ID": null,
+    "usuario": "nini",
+    "funcao": "Proprietário",
+    "nome_apelido": "nini",
+    "nome_completo": "nini",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": {
+      "andar": 1,
+      "coluna": 1,
+      "numero": 101,
+      "nome": "2-101",
+      "ordem": 0,
+      "torre": {
+        "ID": 2,
+        "condID": 1,
+        "numero": 2,
+        "nome": "Bloco 2",
+        "nomeExtenso": "Bloco 2",
+        "ordem": 0,
+        "condTorreAndares": [],
+        "unidades": [
+          {
+            "convites": [
+              {
+                "condDep": null,
+                "role": {
+                  "ID": 13,
+                  "Name": "Proprietário",
+                  "dt_criacao": null,
+                  "usr_criacao": null,
+                  "dt_alteracao": null,
+                  "usr_alteracao": null
+                },
+                "ID": 609,
+                "condID": 1,
+                "condDepID": null,
+                "condTorreUnidID": 73,
+                "condViaUnidID": null,
+                "UserId": 2,
+                "proprietario": false,
+                "codigo": "CFC51C",
+                "nome": "Morador 3",
+                "email": "m@m.com",
+                "cpf": null,
+                "cnpj": null,
+                "statusID": 8,
+                "dt_status": "2017-03-06T15:12:48.443",
+                "status_detalhes": "Convite Aceito",
+                "ConvidadoUserId": 5,
+                "RoleId": 13,
+                "dt_inicio": "2017-03-06T00:00:00",
+                "dt_fim": null,
+                "dt_criacao": "2017-03-06T15:11:03.227",
+                "usr_criacao": "prev",
+                "dt_alteracao": "2017-03-06T15:12:48.443",
+                "usr_alteracao": "nini"
+              },
+              {
+                "condDep": null,
+                "role": {
+                  "ID": 15,
+                  "Name": "Morador",
+                  "dt_criacao": null,
+                  "usr_criacao": null,
+                  "dt_alteracao": null,
+                  "usr_alteracao": null
+                },
+                "ID": 610,
+                "condID": 1,
+                "condDepID": null,
+                "condTorreUnidID": 73,
+                "condViaUnidID": null,
+                "UserId": 5,
+                "proprietario": true,
+                "codigo": "A00730",
+                "nome": "Maria das Dores",
+                "email": "ss@ss.com",
+                "cpf": null,
+                "cnpj": null,
+                "statusID": 8,
+                "dt_status": "2017-03-06T15:13:12.47",
+                "status_detalhes": "Convite Aceito",
+                "ConvidadoUserId": 5,
+                "RoleId": 15,
+                "dt_inicio": "2017-03-06T00:00:00",
+                "dt_fim": null,
+                "dt_criacao": "2017-03-06T15:13:00.14",
+                "usr_criacao": "nini",
+                "dt_alteracao": "2017-03-06T15:13:12.47",
+                "usr_alteracao": "nini"
+              }
+            ],
+            "ID": 73,
+            "condID": 1,
+            "condTorreID": 2,
+            "andar": 1,
+            "coluna": 1,
+            "numero": 101,
+            "nome": "2-101",
+            "ordem": 0,
+            "dt_criacao": "2017-02-24T22:29:18.84",
+            "usr_criacao": "prev",
+            "dt_alteracao": null,
+            "usr_alteracao": null
+          }
+        ],
+        "dt_criacao": "2017-02-24T22:29:18.837",
+        "usr_criacao": "prev",
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    }
+  },
+  {
+    "anti_ID": "93950f7e-1937-4789-a24e-f3567b141c34",
+    "bllt_ID": null,
+    "usuario": "nini",
+    "funcao": "Morador",
+    "nome_apelido": "nini",
+    "nome_completo": "nini",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": {
+      "andar": 1,
+      "coluna": 1,
+      "numero": 101,
+      "nome": "2-101",
+      "ordem": 0,
+      "torre": {
+        "ID": 2,
+        "condID": 1,
+        "numero": 2,
+        "nome": "Bloco 2",
+        "nomeExtenso": "Bloco 2",
+        "ordem": 0,
+        "condTorreAndares": [],
+        "unidades": [
+          {
+            "convites": [
+              {
+                "condDep": null,
+                "role": {
+                  "ID": 13,
+                  "Name": "Proprietário",
+                  "dt_criacao": null,
+                  "usr_criacao": null,
+                  "dt_alteracao": null,
+                  "usr_alteracao": null
+                },
+                "ID": 609,
+                "condID": 1,
+                "condDepID": null,
+                "condTorreUnidID": 73,
+                "condViaUnidID": null,
+                "UserId": 2,
+                "proprietario": false,
+                "codigo": "CFC51C",
+                "nome": "Morador 3",
+                "email": "m@m.com",
+                "cpf": null,
+                "cnpj": null,
+                "statusID": 8,
+                "dt_status": "2017-03-06T15:12:48.443",
+                "status_detalhes": "Convite Aceito",
+                "ConvidadoUserId": 5,
+                "RoleId": 13,
+                "dt_inicio": "2017-03-06T00:00:00",
+                "dt_fim": null,
+                "dt_criacao": "2017-03-06T15:11:03.227",
+                "usr_criacao": "prev",
+                "dt_alteracao": "2017-03-06T15:12:48.443",
+                "usr_alteracao": "nini"
+              },
+              {
+                "condDep": null,
+                "role": {
+                  "ID": 15,
+                  "Name": "Morador",
+                  "dt_criacao": null,
+                  "usr_criacao": null,
+                  "dt_alteracao": null,
+                  "usr_alteracao": null
+                },
+                "ID": 610,
+                "condID": 1,
+                "condDepID": null,
+                "condTorreUnidID": 73,
+                "condViaUnidID": null,
+                "UserId": 5,
+                "proprietario": true,
+                "codigo": "A00730",
+                "nome": "Maria das Dores",
+                "email": "ss@ss.com",
+                "cpf": null,
+                "cnpj": null,
+                "statusID": 8,
+                "dt_status": "2017-03-06T15:13:12.47",
+                "status_detalhes": "Convite Aceito",
+                "ConvidadoUserId": 5,
+                "RoleId": 15,
+                "dt_inicio": "2017-03-06T00:00:00",
+                "dt_fim": null,
+                "dt_criacao": "2017-03-06T15:13:00.14",
+                "usr_criacao": "nini",
+                "dt_alteracao": "2017-03-06T15:13:12.47",
+                "usr_alteracao": "nini"
+              }
+            ],
+            "ID": 73,
+            "condID": 1,
+            "condTorreID": 2,
+            "andar": 1,
+            "coluna": 1,
+            "numero": 101,
+            "nome": "2-101",
+            "ordem": 0,
+            "dt_criacao": "2017-02-24T22:29:18.84",
+            "usr_criacao": "prev",
+            "dt_alteracao": null,
+            "usr_alteracao": null
+          }
+        ],
+        "dt_criacao": "2017-02-24T22:29:18.837",
+        "usr_criacao": "prev",
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    }
+  },
+  {
+    "anti_ID": "105a0fa7-2293-4966-bb6a-2b8cf7fbd1b1",
+    "bllt_ID": null,
+    "usuario": "nono",
+    "funcao": "Porteiro",
+    "nome_apelido": "nono",
+    "nome_completo": "nono",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 2,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Portaria 1",
+      "nomeExtenso": "Portaria 1",
+      "tipoDependencia": {
+        "ID": 2,
+        "nome": "Portaria",
+        "prioridade": 2,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "f208a58c-d175-45ad-a881-63ca6005f136",
+    "bllt_ID": null,
+    "usuario": "nene",
+    "funcao": "Porteiro",
+    "nome_apelido": "nene",
+    "nome_completo": "nene",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 2,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Portaria 1",
+      "nomeExtenso": "Portaria 1",
+      "tipoDependencia": {
+        "ID": 2,
+        "nome": "Portaria",
+        "prioridade": 2,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "2a4954e9-2bcc-4ec1-97ae-6aea08c756e9",
+    "bllt_ID": null,
+    "usuario": "nono",
+    "funcao": "Assistente",
+    "nome_apelido": "nono",
+    "nome_completo": "nono",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 1,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Administração",
+      "nomeExtenso": "Administração",
+      "tipoDependencia": {
+        "ID": 1,
+        "nome": "Administração",
+        "prioridade": 1,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "52fabdfb-05fe-48a3-acd8-aaa47aecfa7e",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Gerente",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 1,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Administração",
+      "nomeExtenso": "Administração",
+      "tipoDependencia": {
+        "ID": 1,
+        "nome": "Administração",
+        "prioridade": 1,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "27adceee-b6a0-49ec-8eed-d5b4de60cb8f",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Assistente",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 1,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Administração",
+      "nomeExtenso": "Administração",
+      "tipoDependencia": {
+        "ID": 1,
+        "nome": "Administração",
+        "prioridade": 1,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": "96fb58ad-0b5a-4184-9491-69ff47c3b3af",
+    "bllt_ID": null,
+    "usuario": "nana",
+    "funcao": "Supervisor",
+    "nome_apelido": "nana",
+    "nome_completo": "Nananana Maria dos Santos",
+    "ativo": true,
+    "dependencia": {
+      "tipoDependenciaID": 1,
+      "tipoDisponibilidadeID": 1,
+      "nome": "Administração",
+      "nomeExtenso": "Administração",
+      "tipoDependencia": {
+        "ID": 1,
+        "nome": "Administração",
+        "prioridade": 1,
+        "imagem": null,
+        "dt_criacao": null,
+        "usr_criacao": null,
+        "dt_alteracao": null,
+        "usr_alteracao": null
+      }
+    },
+    "unidade": null
+  },
+  {
+    "anti_ID": null,
+    "bllt_ID": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "usuario": "Root",
+    "funcao": "Root",
+    "nome_apelido": "Billet Root",
+    "nome_completo": "Billet Root",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": null
+  },
+  {
+    "anti_ID": null,
+    "bllt_ID": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "usuario": "Admin",
+    "funcao": "Billet Admin",
+    "nome_apelido": "Billet Admin",
+    "nome_completo": "Billet Admin",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": null
+  },
+  {
+    "anti_ID": null,
+    "bllt_ID": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "usuario": "Billet Suporte",
+    "funcao": "Billet Suporte",
+    "nome_apelido": "Billet Suporte",
+    "nome_completo": "Billet Suporte",
+    "ativo": true,
+    "dependencia": null,
+    "unidade": null
+  }
+]

@@ -1,0 +1,81 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="form-signin-heading">Entrar</h3>
+    </div>
+    <div class="panel-body">
+        <form role="form" novalidate angular-validator name="userLoginForm" angular-validator-submit="login()">
+            <div class="">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6" ng-class="{'has-error': userLoginForm.inputUsername.$invalid && userLoginForm.inputUsername.$dirty}">
+                            <label for="inputUsername" class="sr-only">Usuário</label>
+                            <input type="text" id="inputUsername" name="inputUsername" class="form-control" ng-minlength="4" ng-maxlength="20" ng-model="user.username" placeholder="seu usuário" required />
+                        </div>
+                        <div class="div_realinhada" ng-show="userLoginForm.inputUsername.$error.required && userLoginForm.inputUsername.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> O usuário é requerido
+                        </div>
+                        <div class="div_realinhada" ng-show="!userLoginForm.inputUsername.$error.required && (userLoginForm.inputUsername.$error.minlength || userLoginForm.inputUsername.$error.maxlength) && userLoginForm.inputUsername.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> Entre 4 e 20 caracteres
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 selectContainer" ng-class="{'has-error': userLoginForm.inputPassword.$error.required && userLoginForm.inputPassword.$dirty}">
+                            <label for="inputPassword" class="sr-only">Senha</label>
+                            <input type="password" id="inputPassword" name="inputPassword" ng-model="user.password" placeholder="sua senha" class="form-control" required />
+                        </div>
+                        <div class="div_realinhada" ng-show="userLoginForm.inputPassword.$error.required && userLoginForm.inputPassword.$dirty">
+                            <span style="color:red" class="glyphicon glyphicon-remove-sign"></span> A senha é requerida
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <button class="btn btn-xs btn-success" ng-disabled="!userLoginForm.$valid || !isEnabled" type="submit">Entrar</button>
+                        <button class="btn btn-xs btn-primary" ng-disabled="!isEnabled" type="button" ng-click="openRegister();">Criar</button>
+                        <button class="btn btn-xs btn-primary" ng-disabled="!isEnabled" type="button" ng-click="sair()">Agora Não</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!--<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="form-signin-heading">Entrar</h3>
+    </div>
+    <div class="panel-body">
+        <form role="form" novalidate angular-validator name="userLoginForm" angular-validator-submit="login()">
+            <div class="">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="inputUsername" class="sr-only">Usuário</label>
+                            <input type="text" id="inputUsername" name="inputUsername" class="form-control" ng-model="user.username" placeholder="seu usuário"
+                                   validate-on="blur" required required-message="'O usuário é requerido'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 selectContainer">
+                            <label for="inputPassword" class="sr-only">Senha</label>
+                            <input type="password" id="inputPassword" name="inputPassword" class="form-control" ng-model="user.password" placeholder="sua senha"
+                                   validate-on="blur" required required-message="'A senha é requerida'">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <button class="btn btn-sm btn-success" type="submit">Entrar</button>
+                        <button class="btn btn-sm btn-primary" type="button" ng-click="openRegister();">Criar Novo Acesso</button>
+                        <button class="btn btn-sm btn-primary" type="button" ng-click="sair()">Agora não</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>-->

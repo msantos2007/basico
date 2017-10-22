@@ -1,0 +1,781 @@
+﻿/* Side Nav */
+.chat md-sidenav md-toolbar {
+    height: 47px;
+    min-height: unset;
+    background-color: seagreen;
+    color: white;
+    position: relative;
+    
+}
+    .chat md-sidenav md-toolbar h4 {
+        font-family: 'Roboto', 'Montserrat', 'Arial';
+        font-size: 17px;
+    }
+
+    .chat md-sidenav md-toolbar .toolbar_input {
+        font-size: 12px;
+        position: relative;
+        padding: 5px;   
+        text-shadow: none;
+        font-weight: normal;
+    }
+
+    .chat md-sidenav md-toolbar .toolbar_input_box::selection {
+        background-color: Highlight;
+    }
+
+        .chat md-sidenav md-toolbar .toolbar_input .toolbar_input_box {
+            width: 100%;
+            border: 0;
+            color: black;
+            height: 20px;
+            padding: 0 5px;
+            border-radius: 2px;
+        }
+
+        .chat md-sidenav md-toolbar .toolbar_input .toolbar_input_box::-webkit-input-placeholder {
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.70);
+        }
+
+        .chat md-sidenav md-toolbar .toolbar_input .toolbar_input_box:-moz-placeholder {
+            font-style: italic;
+        }
+
+        .chat md-sidenav md-toolbar .toolbar_input .toolbar_input_box::-moz-placeholder {
+            font-style: italic;
+        }
+
+        .chat md-sidenav md-toolbar .toolbar_input .toolbar_input_box:-ms-input-placeholder {
+            font-style: italic;
+        }
+
+        .chat md-sidenav md-toolbar button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            margin: 0 10px 0 0 ;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            font-weight: 700;
+        }
+
+    .chat md-sidenav md-toolbar button:hover {
+        color: Highlight;
+    }
+
+    .chat md-sidenav md-toolbar h4 {
+        -moz-transition: opacity 2s; /* Firefox 4 */
+        -webkit-transition: opacity 2s; /* Safari and Chrome */
+        -o-transition: opacity 2s;
+        transition: opacity 2s;
+        -webkit-animation-name: header_nav_move_in; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+        animation-name: header_nav_move_in;
+        animation-duration: .5s;
+    }
+
+
+.chat md-sidenav md-list {
+    overflow: hidden;
+    overflow-y: scroll;
+    /* height: 87%;  media */
+}
+
+    .chat md-sidenav md-list::-webkit-scrollbar {
+        width: 5px; 
+    }
+
+    .chat md-sidenav md-list::-webkit-scrollbar-thumb:hover {
+        background-color: gainsboro;
+    }
+
+    .chat md-sidenav md-list::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+
+    .chat md-sidenav md-list::-webkit-scrollbar-thumb {
+        background-color: darkgray;
+        outline: 1px solid slategrey;
+    }
+
+
+.chat_contato{
+    flex: 0 1 45px;
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 10px 8px 50px;
+}
+
+md-list-item .md-avatar.chat_contato_avatar {
+    margin-top: 0;
+    margin: auto;
+    margin-right: 20px;
+}
+
+.chat .md-list-item-text > p.contato_ultima_mensagem {
+    font-weight: normal;
+    font-size: 9px !important;
+    overflow: hidden;
+    height: 12px;
+}
+
+.md-list-item-text h5,
+.md-list-item-text h6 {
+    font-weight: normal;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+}
+
+.md-list-item-text h6 {
+    font-size: 9px;
+}
+
+.chat md-sidenav .contato_funcao { 
+    font-size: 7px !important;
+}
+
+.chat md-sidenav .md-list-item-text > .contato_funcao {
+    text-transform: none;
+    font-size: 9px !important;
+}
+.chat md-sidenav .contato_badge_nao_lida {
+    border-radius: 50%;
+    font-weight: lighter;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    position: absolute;
+    background-color: rgba(247, 67, 26, 0.90);
+    color: white;
+    z-index: 1;
+    right: 10px;
+    top: 40px;
+}
+
+    .chat md-sidenav .contato_badge_nao_lida > p {
+        font-size: 7px;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        width: 100%;
+        margin: 4px auto;
+        overflow: hidden;
+        font-weight: 700;
+    }
+
+
+@-webkit-keyframes header_nav_move_in {
+    0% {
+        margin-left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes header_nav_move_in {
+    0% {
+        margin-left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+/* Standard syntax */
+@keyframes header_nav_move_in {
+    0% {
+        margin-left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* Scroll */
+.chat .messages {
+    margin: 0 0 0 10px;
+}
+    .chat .messages .messages-content {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+.chat .messages .messages-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat .messages .messages-content::-webkit-scrollbar-thumb:hover {
+    background-color: gainsboro;
+}
+
+.chat .messages .messages-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.chat .messages .messages-content::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    outline: 1px solid slategrey;
+}
+
+
+
+.basicoFundoBodyClass {
+    background-repeat: repeat;
+    background-color: #595a5c;
+}
+
+@media screen and (min-width: 415px) {
+    .chat {
+        width: 81%;
+        height: 85%;
+        max-height: inherit;
+        margin-top: 25px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+        border-radius: 5px; /* marcelo */
+    }
+    .message-box .message-input {
+        width: 93%;
+        padding-left: 25px !important;
+    }
+    .message-box .message-submit {
+        width: 7%;
+    }
+
+    .chat md-sidenav md-list{
+        height: 87%;
+    }
+
+
+
+}
+@media screen and (max-width: 414px) {
+    .chat {
+        width: 300px;
+        height: 87%; 
+        /*max-height: 500px;*/
+        margin-top: 27px;
+    }
+    .message-box .message-input {
+        width: 90%;
+    }
+    .message-box .message-submit {
+        width: 10%;
+    }
+
+    .chat md-sidenav md-list {
+        height: 82%;
+    }
+}
+
+.chat .chat_options {
+    color: white;
+    position: absolute;
+    z-index: 3;
+    right: 25px;
+    top: 15px;
+}
+ 
+    .chat .chat_options i {
+        color: lightgrey;
+        font-size: 16px;
+        cursor: pointer; 
+    }
+
+    .chat .chat_options i.fa-comment {
+        font-size: 14px;
+    }
+
+    .chat .chat_options i.fa-comment:hover,
+    .chat .chat_options i.fa-comment:hover i {
+        color: lawngreen; 
+    }
+    .chat .chat_options i.fa-user:hover,
+    .chat .chat_options i.fa-comments:hover {
+        color: Highlight; 
+    }
+
+
+
+/*--------------------
+Chat
+--------------------*/
+.chat {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);     
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/**,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #044f48, #2a7561);
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    overflow: hidden;
+}*/
+
+/*.bg {
+<div class="bg"></div>
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url("https://images.unsplash.com/photo-1451186859696-371d9477be93?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925") no-repeat 0 0;
+    filter: blur(80px);
+    transform: scale(1.2);
+}*/
+
+
+/*--------------------
+Chat Title
+--------------------*/
+.chat-title {
+    flex: 0 1 45px;
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 10px 8px 50px;
+}
+    .chat-title h1, .chat-title h2 {
+        font-weight: normal;
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    .chat-title h2 {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .chat-title .avatar {
+        position: absolute;
+        z-index: 1;
+        top: 8px;
+        left: 9px;
+        border-radius: 30px;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        border: 2px solid rgba(255, 255, 255, 0.24);
+    }
+        .chat-title .avatar img {
+            width: 100%;
+            height: auto;
+        }
+
+/*--------------------
+Messages
+--------------------*/
+.messages {
+    flex: 1 1 auto;
+    color: rgba(255, 255, 255, 0.8);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    /*margin: 0 10px;   scrollbar */
+
+    font-family: Montserrat;
+    font-size: 10px;
+}
+
+
+    .messages .messages-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 101%;
+        width: 100%;
+        
+        /*overflow-y: auto;*/
+    }
+
+    .message-datetime { 
+        width: 100%;
+        height: 25px;
+        font-size: 9px;
+        margin: 0px 0px 25px 0px;
+        overflow: hidden;
+        top: 15px;
+        position: relative; 
+    }
+
+        .message-datetime > .message-datetime-date {
+            border-radius: 0px;
+            background-color: rgba(225,245,254,0.3);
+            /*color: rgba(69,90,100,0.95);*/
+            color: white;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+            text-align: center;
+            width: 45%;
+            margin: 0 auto;
+            text-transform: uppercase;
+            height: 20px;
+            padding-top: 4px;
+            max-width: 160px;
+            border-top-left-radius: 3px;
+            border-bottom-right-radius: 3px;            
+        }
+
+    .messages .message {
+        clear: both;
+        float: left;
+        padding: 6px 10px 7px;
+        border-radius: 10px 10px 10px 0;
+        background: rgba(0, 0, 0, 0.3);
+        margin: 8px 0;
+        font-size: 12px; /* marcelo */
+        line-height: 1.4;
+        margin-left: 35px;
+        position: relative;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        word-break: break-word;
+        min-width: 50px;    
+    }
+
+        .messages .message .timestamp {
+            position: absolute;
+            bottom: -15px;
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .messages .message::before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            border-top: 6px solid rgba(0, 0, 0, 0.3);
+            left: 0;
+            border-right: 7px solid transparent;
+        }
+
+        .messages .message .avatar {
+            position: absolute;
+            z-index: 1;
+            bottom: -15px;
+            left: -35px;
+            border-radius: 30px;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            border: 2px solid rgba(255, 255, 255, 0.24);
+        }
+
+            .messages .message .avatar img {
+                width: 100%;
+                height: auto;
+            }
+        .messages .message.message-personal {
+            float: right;
+            
+            text-align: left;
+            background: linear-gradient(120deg, #248A52, #257287);
+            border-radius: 10px 10px 0 10px;
+        }
+            .messages .message.message-personal:not(.new) {
+                color: rgba(255,255,255,0.8);
+            }
+            .messages .message.message-personal.new {
+                color: #fff;
+            }
+
+            .messages .message.message-personal::before {
+                left: auto;
+                right: 0;
+                border-right: none;
+                border-left: 5px solid transparent;
+                border-top: 4px solid #257287;
+                bottom: -4px;
+            }
+
+        .margin_last_child {
+            margin-bottom: 30px !important;
+            margin-top: 10px !important;
+        }
+
+        .messages .message.new {
+            transform: scale(0);
+            transform-origin: 0 0;
+            animation: bounce 500ms linear both;
+            color: wheat;
+        }
+
+        .messages .message.loading::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: '';
+            display: block;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 2;
+            margin-top: 4px;
+            animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+            border: none;
+            animation-delay: .15s;
+        }
+
+        .messages .message.loading span {
+            display: block;
+            font-size: 0;
+            width: 20px;
+            height: 10px;
+            position: relative;
+        }
+
+            .messages .message.loading span::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: '';
+                display: block;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                z-index: 2;
+                margin-top: 4px;
+                animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+                margin-left: -7px;
+            }
+
+            .messages .message.loading span::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: '';
+                display: block;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                z-index: 2;
+                margin-top: 4px;
+                animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+                margin-left: 7px;
+                animation-delay: .3s;
+            }
+
+/*--------------------
+Message Box
+--------------------*/
+.message-box {
+    flex: 0 1 10px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 10px;
+    position: relative;
+    height: 50px;
+    font-family: Montserrat;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+    .message-box .message-input {
+        background: none;
+        border: none;
+        outline: none !important;
+        resize: none;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 13px;
+        font-weight: normal;
+        /*min-height: 30px;*/
+        margin: 0;
+        padding-right: 40px;
+        /*width: 90%;*/
+        vertical-align: baseline;
+        /*background-color: dimgray;*/
+        margin-top: 5px;
+        padding: 5px 10px;
+        height: 30px;
+    }
+
+
+    .message-box textarea:focus:-webkit-placeholder {
+        color: transparent;
+    }
+
+    .message-box .message-submit {
+        position: absolute;
+        z-index: 1;
+        top: 13px;
+        right: 10px;
+        color: #fff;
+        border: none;
+        /*background: #248A52;*/
+        background: transparent;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 1;
+        /*padding: 6px 10px;*/
+        border-radius: 10px;
+        outline: none !important;
+        transition: background .2s ease;
+        /*width: 10%;*/
+    }
+
+        .message-box .message-submit:hover {
+            /*background: #1D7745;*/
+        }
+
+/*--------------------
+Custom Srollbar
+--------------------*/
+/*.mCSB_scrollTools {
+    margin: 1px -3px 1px 0;
+    opacity: 0;
+}
+
+.mCSB_inside > .mCSB_container {
+    margin-right: 0px;
+    padding: 0 10px;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}*/
+
+/*--------------------
+Bounce
+--------------------*/
+@keyframes bounce {
+    0% {
+        transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    4.7% {
+        transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    9.41% {
+        transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    14.11% {
+        transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    18.72% {
+        transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    24.32% {
+        transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    29.93% {
+        transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    35.54% {
+        transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    41.04% {
+        transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    52.15% {
+        transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    63.26% {
+        transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    85.49% {
+        transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+@keyframes ball {
+    from {
+        transform: translateY(0) scaleY(0.8);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+ 
+
+
+/* Marcelo */
+/* Para as input boxes*/
+.chat .message-box ::-webkit-input-placeholder {
+    font-style: italic;
+    color: rgba(245, 246, 78, 0.40);
+}
+
+.chat .message-box :-moz-placeholder {
+    font-style: italic;
+}
+
+.chat .message-box ::-moz-placeholder {
+    font-style: italic;
+}
+
+.chat .message-box :-ms-input-placeholder {
+    font-style: italic;
+}
+
+/*.chat .mCSB_inside > .mCSB_container {
+    margin-right: 5px;
+}*/
